@@ -1,0 +1,28 @@
+---
+import CircleIcon from "./CircleIcon.astro";
+import Icon from "astro-icon";
+import SocialMedia from "./SocialMedia.astro";
+---
+<section id="header">
+  <SocialMedia size="sm"/>
+  <div
+    id="navSection"
+    class="flex flex-col md:flex-row justify-between gap-4 px-4 py-8 min-h-10"
+    x-data="{ isOpen: false }"
+  >
+    <div id="logo" class="font-logo text-3xl text-title-text font-bold">
+      MILDRED PSICOLOGÍA
+    </div>
+    <button class="w-10 h-10 absolute right-0 mr-4 md:hidden" @click="isOpen = ! isOpen">
+      <Icon name="ri:menu-fill" class="w-8 h-8 hover:fill-hover-text" x-show="!isOpen" />
+      <Icon name="ri:close-fill" class="w-8 h-8 hover:fill-hover-text" x-show="isOpen" />
+    </button>
+    <nav id="nav" class="flex gap-6 text-lg font-semibold text-title-text flex-col md:flex-row max-h-0 md:max-h-20 overflow-hidden" :class="isOpen ?  'max-h-[1000px] transition-[max-height] duration-300' : ''">
+      <a class="hover:text-hover-text" href="/">Inicio</a>
+      <a class="hover:text-hover-text" href="/servicios">Servicios</a>
+      <a class="hover:text-hover-text" href="/sobre-mi">Sobre mí</a>
+      <a class="hover:text-hover-text" href="/contactos">Contacto</a>
+    </nav>
+  </div>
+
+</section>

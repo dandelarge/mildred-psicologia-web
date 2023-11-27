@@ -1,0 +1,24 @@
+---
+import CircleIcon from './CircleIcon.astro';
+
+interface Props {
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const { size = 'md' }: Props = Astro.props;
+---
+
+<div class="flex justify-end gap-4 p-4" id="socialLinksHeader">
+  <a href="">
+    <CircleIcon name="ri:facebook-fill" size={size} />
+  </a>
+  <a href="">
+    <CircleIcon name="ri:twitter-fill" size={size}/>
+  </a>
+  <a href="">
+    <CircleIcon name="ri:linkedin-fill" size={size}/>
+  </a>
+  <a href="">
+    <CircleIcon name="ri:youtube-fill" size={size}/>
+  </a>
+</div>

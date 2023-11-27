@@ -1,0 +1,23 @@
+---
+import CircleIconBig from "./CircleIconBig.astro";
+
+interface Props {
+  icon: string;
+  name: string;
+  href?: string;
+  linkText: string;
+}
+
+const { icon, name, href, linkText } = Astro.props;
+---
+
+<div class="flex gap-4">
+  <CircleIconBig name={icon} />
+  <div class="flex flex-col items-start justify-center">
+    <p>{name}</p>
+    <a
+      href={href || "#"}
+      class="font-bold text-lg">{linkText}</a
+    >
+  </div>
+</div>

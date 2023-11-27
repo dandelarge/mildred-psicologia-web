@@ -1,0 +1,110 @@
+---
+import Icon from 'astro-icon';
+import AccentButton from '../components/AccentButton.astro';
+const reviews = [
+      {
+        name: 'Carlos',
+        sex: 'm',
+        quote: 'Me sentí muy cómodo expresándome ya que te escucha con mucha atención y genera mucha confianza. Excelente trato decsu parte, muy recomendada.'
+      },
+      {
+        name: 'Guillermo',
+        sex: 'm',
+        quote: 'Mildred me ayudo mucho en todo mi proceso. Además me ofreció herramientas muy prácticas que podía aplicar a mi vida. En verdad siento que durante mi proceso con ella hubo un avance y logré ver cosas que no me imaginaba y que me han ayudado mucho.'
+      },
+      {
+        name: 'Nancy',
+        sex: 'w',
+        quote: 'Mildred es la mejor, te escucha sin juicio y con empatía. Una hora a la semana con ella es tranquilidad.'
+      },
+      {
+        name: 'Wenndy',
+        sex: 'w',
+        quote: 'Me encanta tomar terapia con Mildred, nos hace sentir tanto en confianza que se me pasa tan rápido el tiempo, es una gran psicoterapeuta y me gusta mucho como nos ayuda a mejorar'
+      },
+       {
+        name: 'Carlos',
+        sex: 'm',
+        quote: 'Me sentí muy cómodo expresándome ya que te escucha con mucha atención y genera mucha confianza. Excelente trato decsu parte, muy recomendada.'
+      },
+      {
+        name: 'Guillermo',
+        sex: 'm',
+        quote: 'Mildred me ayudo mucho en todo mi proceso. Además me ofreció herramientas muy prácticas que podía aplicar a mi vida. En verdad siento que durante mi proceso con ella hubo un avance y logré ver cosas que no me imaginaba y que me han ayudado mucho.'
+      },
+      {
+        name: 'Nancy',
+        sex: 'w',
+        quote: 'Mildred es la mejor, te escucha sin juicio y con empatía. Una hora a la semana con ella es tranquilidad.'
+      },
+      {
+        name: 'Wenndy',
+        sex: 'w',
+        quote: 'Me encanta tomar terapia con Mildred, nos hace sentir tanto en confianza que se me pasa tan rápido el tiempo, es una gran psicoterapeuta y me gusta mucho como nos ayuda a mejorar'
+      }
+    ];
+
+---
+<div class="overflow-hidden w-5/6">
+  <div class="flex overflow-scroll scroll-m-0" x-data="reviews" x-ref="container">
+    {reviews.map((review, index) => (
+      <div class="py-4 w-5/6 flex-shrink-0" x-ref={`review-${index}`}>
+        <div class="flex items-center p-4 gap-4">
+          <Icon name="teenyicons:user-circle-solid" class="text-accent-text" size="48" />
+          <h4  class="text-2xl text-title-text font-raleway">{review.name}</h4>
+        </div>
+        <p class="px-4 text-lg">{review.quote}</p>
+      </div>
+    ))}
+  </div>
+</div>
+<div class="py-8">
+  <a href="https://www.doctoralia.com.mx/mildred-diaz-castillo/psicologo/guadalajara#&tab=profile-reviews">
+    <AccentButton>
+      Ver más reseñas
+    </AccentButton>
+  </a>
+</div>
+
+<script>
+  import { elementIsVisibleInViewport } from '../utils';
+
+  document.addEventListener('alpine:init', () => {
+    Alpine.data('reviews', () => ({
+      updateCurrent() {
+        console.log(this.current);
+        const length = Object.getOwnPropertyNames(this.$refs)
+          .filter(refName =>
+            refName.substring(0, 7) === 'review-'
+          ).length;
+
+        const container = this.$refs.container as HTMLDivElement;
+
+        if(elementIsVisibleInViewport(container)) {
+          this.$refs[`review-${this.current}`].scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'start'
+          });
+        }
+
+        this.current = this.current === length - 1 ? 0 : this.current + 1;
+      },
+      interval: null,
+      current: 0,
+      init() {
+        if (this.interval) {
+          clearInterval(this.interval);
+        }
+
+        this.interval = setInterval(() => {
+          this.updateCurrent();
+        }, 3000);
+
+      },
+      destroy() {
+        clearInterval(this.interval);
+      },
+    }));
+  })
+</script>

@@ -1,0 +1,27 @@
+---
+import Icon from 'astro-icon';
+
+interface Props {
+  name: string;
+  pack?: string;
+  size?: "sm" | "md" | "lg";
+}
+
+const {name, pack, size = "md"} = Astro.props;
+
+const sizes = {
+  sm: "16",
+  md: "24",
+  lg: "32",
+}
+
+const paddings = {
+  sm: "p-1",
+  md: "p-2",
+  lg: "p-3",
+}
+
+---
+<div class={`rounded-full bg-accent-bg text-white hover:bg-rose-fog-400 ${paddings[size]}`}>
+  <Icon name={name} pack={pack} size={sizes[size]}/>
+</div>
