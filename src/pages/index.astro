@@ -1,11 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
-import { Image } from 'astro:assets';
-import hero from '../images/hero.jpeg';
 import AccentButton from '../components/AccentButton.astro';
 import Testimonials from '../components/Testimonials.astro';
-import CircleIconBig from '../components/CircleIconBig.astro';
 import Icon from 'astro-icon';
 import terapiaIndividual from '../images/terapia-individual.png';
 import terapeaIndividual2 from '../images/terapia-individual-2.png';
@@ -15,7 +12,7 @@ import terapiaFamiliar from '../images/terapia-familiar.jpeg';
 import terapiaFamiliar2 from '../images/terapia-familiar-2.png';
 import CardsRow from '../components/CardsRow.astro';
 import { temas } from '../utils/temas';
-import ContactItem from '../components/ContactItem.astro';
+import Contacto from '../components/Contacto.astro';
 
 const temasRow1 = temas.slice(0, 3);
 const temasRow2 = temas.slice(3, 6);
@@ -124,35 +121,5 @@ const temasRow3 = temas.slice(6);
 
 		</div>
 	</section>
-	<section id="contacto" class="flex flex-col items-start p-8 gap-8 max-w-5xl mx-auto pb-20">
-		<h2 class="font-oswald text-title-text text-4xl tracking-wide self-stretch text-center">
-			Información de contacto
-		</h2>
-		<p>
-			Favor de mandar mensaje de WhatsApp, sms o correo para obtener más información. A la. Brevedad posible le estaré contestando.
-		</p>
-		<div class="flex flex-col md:flex-row md:justify-between w-full">
-			<div class="flex flex-col gap-4 items-start md:basis-1/2 shrink-0 grow-0 py-10 w-full">
-				<ContactItem
-					icon="ic:baseline-whatsapp"
-					name="WhatsApp"
-					href="https://wa.me/523310951644?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita."
-					linkText="33 1095 1644"
-				/>
-				<ContactItem
-					icon="ic:outline-email"
-					name="Correo"
-					href="mailto:mildredpsicologia@gmail.com"
-					linkText="mildredpsicologia@gmail.com"
-				/>
-			</div>
-			<div class="rounded-tl-2xl rounded-br-2xl bg-secondary-bg p-10 md:basis-1/2">
-				<h4 class="text-title-text text-2xl mb-8 text-oswald">Horarios</h4>
-				<p class="text-lg flex justify-between max-w-md">
-					Lunes a viernes:
-					<span class="font-bold"> 9:00 am - 8:00 pm</span>
-				</p>
-			</div>
-		</div>
-	</section>
+	<Contacto />
 </Layout>

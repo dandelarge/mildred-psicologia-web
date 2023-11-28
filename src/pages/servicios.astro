@@ -1,0 +1,74 @@
+---
+import Slideshow from "../components/Slideshow.astro";
+import Subheader from "../components/Subheader.astro";
+import Layout from "../layouts/Layout.astro";
+import terapiaIndividual from "../images/servicios-1.jpeg";
+import terapiaIndividual2 from "../images/servicios-2.jpeg";
+import SlideshowBig from "../components/SlideshowBig.astro";
+import terapiaPareja from "../images/servicios-3.jpeg";
+import terapiaPareja2 from "../images/terapia-pareja.jpeg";
+import terapiaFamiliar from "../images/terapia-familiar.jpeg";
+import terapiaFamiliar2 from "../images/terapia-familiar-2.png";
+
+---
+
+<Layout>
+  <section id="servicios" class="p-8 flex flex-col gap-10 text-lg max-w-5xl mx-auto">
+    <h2 class="text-5xl font-semimold text-title-text mb-8">Servicios</h2>
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-10 mb-16">
+      <div class="w-full md:basis-5/12">
+        <SlideshowBig
+          src1={terapiaIndividual}
+          src2={terapiaIndividual2}
+          alt="Terapia individual"
+        />
+      </div>
+      <div class="basis-7/12 flex flex-col gap-10">
+        <Subheader>
+          Terapia individual
+        </Subheader>
+        <p>
+          La terapia Individual tiene como objetivo tratar las problemáticas que una persona tiene y que le impiden gozar de su vida como le gustaría.
+        </p>
+      </div>
+    </div>
+    <div class="flex flex-col-reverse md:flex-row items-center md:items-start gap-10 mb-16">
+      <div class="basis-7/12 flex flex-col gap-10">
+        <Subheader>
+          Terapia de pareja
+        </Subheader>
+        <p>
+          La terapia de pareja tiene como objetivo trabajar con los problemas que les impide disfrutar de la relación.
+        </p>
+        <p>
+          Se llega a esto mediante estrategias hechas a la medida para cada caso.
+        </p>
+      </div>
+      <div class="w-full md:basis-5/12">
+        <SlideshowBig
+          src1={terapiaPareja}
+          src2={terapiaPareja2}
+          alt="Terapia individual"
+        />
+      </div>
+    </div>
+    <div class="flex flex-col md:flex-row items-center md:items-start gap-10 mb-16">
+      <div class="w-full md:basis-5/12">
+        <SlideshowBig
+          src1={terapiaFamiliar}
+          src2={terapiaFamiliar2}
+          alt="Terapia familiar"
+        />
+      </div>
+      <div class="basis-7/12 flex flex-col gap-10">
+        <Subheader>
+          Terapia familiar
+        </Subheader>
+        <p>
+          La terapia familiar tiene como objetivo trabajar con las problemáticas que les están impidiendo relacionarse sanamente como familia y que a su vez tienen un impacto en cada miembro de manera individual. Se llega a esto mediante estrategias hechas a la medida para cada caso.
+
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

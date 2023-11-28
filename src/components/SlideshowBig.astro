@@ -1,0 +1,77 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  src1: ImageMetadata;
+  src2: ImageMetadata;
+  alt: string;
+}
+
+const {src1, src2, alt} = Astro.props;
+
+---
+<div class="slideshow-container-short">
+
+  <div class="slide-short">
+    <Image decoding="async" src={src1} alt={alt}>
+  </div>
+  <div class="slide-short foreground">
+    <Image decoding="async" src={src2} alt={alt}>
+  </div>
+</div>
+
+<style>
+.slideshow-container-short {
+  overflow: hidden;
+  position: relative;
+  min-height: 300px;
+  border-top-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  box-shadow: 3px 3px 16px rgba(0, 0, 0, 0.25);
+}
+
+.slide-short {
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  transition: opacity 1s ease-out;
+}
+
+.slide-short.foreground {
+    animation: materialize 10s ease-in infinite;
+}
+
+.slide-short > img {
+    width: auto;
+    display: block;
+    min-height: 300px;
+    object-fit: cover
+}
+
+.slide.foreground:hover {
+  opacity: 0;
+}
+
+@keyframes materialize {
+    0 {
+        opacity: 1
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+
+}
+</style>

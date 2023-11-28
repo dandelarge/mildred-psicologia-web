@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  imageSrc: ImageMetadata
+  imageAlt: string
+  image2Src: ImageMetadata
+  image2Alt: string
+  className?: string;
+  height?: string
+}
+
+const { imageSrc, imageAlt, image2Src, image2Alt, className = '', height } = Astro.props;
+---
+<div class={`rounded overflow-hidden relative shadow-sm shadow-sisal-500 ${className}`}>
+  <div class={`overflow-hidden rounded absolute animate-materialize ${height ? 'h-' + height : 'first-letter:' }`}>
+    <Image src={imageSrc} alt={imageAlt} class="object-cover object-center" />
+  </div>
+  <Image src={image2Src} alt={image2Alt} class="object-cover object-center" />
+</div>
