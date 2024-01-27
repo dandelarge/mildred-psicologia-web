@@ -30,8 +30,8 @@ import { Image } from 'astro:assets';
 }
   {imageSrc && imageAlt && !image2Src && <Image src={imageSrc} alt={imageAlt} />}
 
-  <h4 class={`font-oswald text-2xl text-title-text ${imageSrc ? 'text-center' : 'my-3'}`}>{title}</h4>
-  <div class="text-lg">
+  <h4 class={`font-oswald text-2xl text-title-text text-center ${imageSrc ? '' : 'my-3'}`}>{title}</h4>
+  <div class="text-lg text-justify">
     <slot></slot>
   </div>
   {href && linkText && (

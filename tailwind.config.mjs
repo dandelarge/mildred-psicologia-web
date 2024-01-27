@@ -32,7 +32,7 @@ export default {
 			},
 			fontFamily: {
 				'logo': ['foglighten', 'serif'],
-				'sans': ['"Open Sans"', 'sans-serif'],
+				'sans': ['PT Serif', 'sans-serif'],
 				'raleway': ['Raleway', 'sans-serif'],
 				'oswald': ['Oswald', 'sans-serif'],
 			},
