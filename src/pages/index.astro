@@ -114,8 +114,7 @@ const temasRow3 = temas.slice(6);
 				<CardsRow items={temasRow3} />
 			</div>
 			<div >
-				<AccentButton @click="open = ! open; $refs.buttonAnchor.scrollIntoView()">
-					Ver más
+				<AccentButton @click="open = ! open; $refs.buttonAnchor.scrollIntoView()" x-text="open? 'Ver menos':'Ver más'">
 				</AccentButton>
 			</div>
 

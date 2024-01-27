@@ -18,8 +18,8 @@ const { className = '' } = Astro.props;
     Información de contacto
   </h2>
   <p>
-    Favor de mandar mensaje de WhatsApp, sms o correo para obtener más
-    información a la brevedad posible le estaré contestando.
+    Le agradecería que enviara un mensaje a través de WhatsApp, SMS o correo electrónico para solicitar información adicional.
+    Responderé a la brevedad posible.
   </p>
   <div class="flex flex-col md:flex-row md:justify-between w-full">
     <div
@@ -42,9 +42,16 @@ const { className = '' } = Astro.props;
       class="rounded-tl-2xl rounded-br-2xl bg-secondary-bg p-10 md:basis-1/2"
     >
       <h4 class="text-title-text text-2xl mb-8 text-oswald">Horarios</h4>
+      <h5 class="text-lg font-semibold">Horarios de atención</h5>
       <p class="text-lg flex justify-between max-w-md">
         Lunes a viernes:
-        <span class="font-bold"> 9:00 am - 8:00 pm</span>
+        <span class="font-bold"> 9:00 am - 9:00 pm</span>
+      </p>
+      <hr class="bg-title-text my-6"/>
+      <h5 class="text-lg font-semibold">Horarios de terapia</h5>
+      <p class="text-lg flex justify-between max-w-md">
+        Lunes a viernes:
+        <span class="font-bold"> 1:00 pm - 8:00 pm</span>
       </p>
     </div>
   </div>

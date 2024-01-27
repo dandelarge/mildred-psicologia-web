@@ -6,7 +6,10 @@ export const temas = [
   },
   {
     title: 'Depresión',
-    description: `La depresión es un trastorno del estado de ánimo que causa una profunda sensación de tristeza y pérdida de interés en las cosas. A menudo está relacionada con desequilibrios químicos en el cerebro y factores ambientales, es decir nuestros sistemas en los que nos desenvolvemos.`
+    description: `La depresión es un trastorno del estado de ánimo que causa una profunda sensación de tristeza y pérdida de interés en las cosas. A menudo está relacionada con desequilibrios químicos en el cerebro y factores ambientales, es decir nuestros sistemas en los que n1s desenvolvemos.`
+  },{
+    title: 'Problemas Interpersonales',
+    description: `Lo más importante del ser humano son las relaciones interpersonales (pareja, familia, amigos, trabajo, etc.). Es por ello que es vital resolver las dificultades y conflictos que pueden surgir en las dinámicas de relación entre individuos, como problemas de comunicación, desacuerdos y tensiones.`
   },
   {
     title: 'Duelo',
@@ -17,10 +20,7 @@ export const temas = [
     title: 'Trastorno por Déficit de Atención e Hiperactividad (TDAH)',
     description: `El TDAH es un trastorno neurológico que afecta la atención, impulsividad y actividad física. Las personas con TDAH pueden tener dificultades para concentrarse, mantener la atención y controlar sus impulsos. Esto puede impactar en su rendimiento académico, laboral y en sus relaciones interpersonales.`
   },
-  {
-    title: 'Problemas Interpersonales',
-    description: `Lo más importante del ser humano son las relaciones interpersonales (pareja, familia, amigos, trabajo, etc.). Es por ello que es vital resolver las dificultades y conflictos que pueden surgir en las dinámicas de relación entre individuos, como problemas de comunicación, desacuerdos y tensiones.`
-  },
+
   {
     title: 'Problemas de Autoestima',
     description: `La autoestima es la valoración que una persona tiene de sí misma. Los problemas de autoestima implican una evaluación negativa y desfavorable de uno mismo y de la propia valía. Se manifiestan en una percepción distorsionada y crítica de nuestras habilidades, apariencia física, valor como persona y capacidad para tener éxito en la vida.`
@@ -31,6 +31,8 @@ export const temas = [
   },
   {
     title: 'Otros',
-    description: `Estas son algunas problemáticas comunes con las que las personas suelen trabajar en terapia. Sin embargo, esta lista no es exhaustiva. Si no ves tu preocupación específica, ¡no te preocupes! Siéntete con la confianza de preguntar sobre cualquier tema o inquietud que desees abordar. No hay juicios aquí, solo apoyo, comprensión y guía para ti.`
+    description: `Estas son algunas problemáticas comunes con las que las personas suelen trabajar en terapia. Sin embargo, esta lista no es exhaustiva. Si no ves tu preocupación específica, ¡no te preocupes! Siéntete con la confianza de preguntar sobre cualquier tema o inquietud que desees abordar. No hay juicios aquí, solo apoyo, comprensión y guía para ti.`,
+    button: 'Pide informacíon',
+    link: 'https://wa.me/523310951644?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita.'
   },
 ];

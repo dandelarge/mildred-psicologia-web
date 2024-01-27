@@ -11,7 +11,9 @@ import SocialMedia from "./SocialMedia.astro";
     x-data="{ isOpen: false }"
   >
     <div id="logo" class="font-logo text-3xl text-title-text font-bold">
-      MILDRED PSICOLOGÍA
+      <a href="/">
+        MILDRED PSICOLOGÍA
+      </a>
     </div>
     <button class="w-10 h-10 absolute right-0 mr-4 md:hidden" @click="isOpen = ! isOpen">
       <Icon name="ri:menu-fill" class="w-8 h-8 hover:fill-hover-text" x-show="!isOpen" />
