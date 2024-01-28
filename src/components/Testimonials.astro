@@ -101,7 +101,7 @@ const reviews = [
 
         this.interval = setInterval(() => {
           this.updateCurrent();
-        }, 3000);
+        }, 3000) as unknown as number;
 
       },
       destroy() {
