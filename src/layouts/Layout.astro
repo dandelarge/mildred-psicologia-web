@@ -5,17 +5,20 @@ import { ViewTransitions } from 'astro:transitions';
 import { SEO } from 'astro-seo'
 interface Props {
 	title?: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+let { title, description } = Astro.props;
+if (!title) title = "Mildred Psicologia. Dra. Mildred Diaz; Psicologia y Terapia en Guadalajara";
+if (!description) description = "Psicólogo en Guadalajara ✅, Psicologa en Guadalajara, Psicólogos en Guadalajara, Psicólogos en Zapopan, Psicóloga en Zapopan, Agenda tu cita !  Psicólogo de pareja, Terapia Individual, Terapia Infantil, Terapia Familiar, Terapia de pareja, depresion, ansiedad, TDAH, Atencion dispersa, terapia, Terapia en linea, Terapia sistemica, Mildred Diaz, Psicologo ZMG"
 ---
 
 <!doctype html>
 <html lang="en" class="w-full h-full bg-gradient-to-b from-pearl-bush-200 to-pearl-bush-100 text-main-text">
 	<head>
 		<SEO
-			title="Mildred Psicologia. Dra. Mildred Diaz; Psicologia y Terapia en Guadalajara"
-			description="Psicólogo en Guadalajara ✅, Psicologa en Guadalajara, Psicólogos en Guadalajara, Psicólogos en Zapopan, Psicóloga en Zapopan, Agenda tu cita !  Psicólogo de pareja, Terapia Individual, Terapia Infantil, Terapia Familiar, Terapia de pareja, depresion, ansiedad, TDAH, Atencion dispersa, terapia, Terapia en linea, Terapia sistemica, Mildred Diaz, Psicologo ZMG"
+			title={title}
+			description={description}
 			openGraph={{
 				basic: {
 					title: 'Mildred Psicologia. Dra. Mildred Diaz. Terapia Sistémica en Guadalajara',
@@ -29,7 +32,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Mildred psicologia Web" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title || 'Mildred Psicologia'}</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com">
