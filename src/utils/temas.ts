@@ -6,8 +6,8 @@ export const temas = [
   },
   {
     title: 'Depresión',
-    description: `La depresión es un trastorno del estado de ánimo que causa una profunda sensación de tristeza y pérdida de interés en las cosas. A menudo está relacionada con desequilibrios químicos en el cerebro y factores ambientales, es decir nuestros sistemas en los que n1s desenvolvemos.`
-  },{
+    description: `La depresión es un trastorno del estado de ánimo que causa una profunda sensación de tristeza y pérdida de interés en las cosas. A menudo está relacionada con desequilibrios químicos en el cerebro y factores ambientales, es decir, nuestros sistemas en los que nos desenvolvemos.`
+  }, {
     title: 'Problemas Interpersonales',
     description: `Lo más importante del ser humano son las relaciones interpersonales (pareja, familia, amigos, trabajo, etc.). Es por ello que es vital resolver las dificultades y conflictos que pueden surgir en las dinámicas de relación entre individuos, como problemas de comunicación, desacuerdos y tensiones.`
   },
